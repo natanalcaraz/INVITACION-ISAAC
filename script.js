@@ -16,3 +16,20 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+const playButton = document.getElementById("playButton");
+const bgMusic = document.getElementById("bgMusic");
+
+if (playButton && bgMusic) {
+  playButton.addEventListener("click", () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      playButton.textContent = "⏸️";
+      playButton.classList.add("playing");
+    } else {
+      bgMusic.pause();
+      playButton.textContent = "▶️";
+      playButton.classList.remove("playing");
+    }
+  });
+}
