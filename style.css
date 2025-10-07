@@ -234,3 +234,31 @@ footer {
     height: auto;
   }
 }
+
+/* --- Frase especial bajo la galería --- */
+.quote-section {
+  background: linear-gradient(90deg, #0a3d91, #1e56b3);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.quote-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 30px 15px;
+    margin: 30px 10px;
+  }
+
+  .quote-section p {
+    font-size: 1rem;
+  }
+}
