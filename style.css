@@ -262,3 +262,18 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* --- Ajuste de espaciado en la sección de confirmación --- */
+.rsvp h2 {
+  margin-bottom: 15px;
+}
+
+.rsvp p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.rsvp a.btn {
+  display: inline-block;
+  margin-top: 15px;
+}
