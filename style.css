@@ -155,28 +155,28 @@ footer {
   padding: 15px;
   font-size: 0.9rem;
 }
-/* --- Botón de música --- */
+/* --- Botón de música flotante lateral --- */
 .music-player {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px 0;
+  position: fixed;
+  bottom: 20px;     /* distancia desde abajo */
+  right: 20px;      /* cámbialo a 'left: 20px;' si lo querés al otro lado */
+  z-index: 9999;    /* siempre visible sobre todo */
 }
 
 .play-btn {
-  background-color: #ffffffc7;
+  background-color: #ffffffd8;
   border: 2px solid #4a90e2;
   border-radius: 50%;
   font-size: 2rem;
   padding: 15px 20px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
 }
 
 .play-btn:hover {
   background-color: #4a90e2;
-  color: white;
+  color: #fff;
   transform: scale(1.1);
 }
 
