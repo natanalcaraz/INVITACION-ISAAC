@@ -121,6 +121,41 @@ h2 {
   transform: scale(1.03);
 }
 
+/* --- Animaciones suaves --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #0a3d91;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
 
 /* --- Animaciones suaves --- */
 .fade-in {
