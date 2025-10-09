@@ -282,7 +282,8 @@ footer {
 .carousel {
   position: relative;
   width: 90%;
-  max-width: 500px;
+  max-width: 380px; /* 🔹 ancho máximo más pequeño */
+  height: 280px;    /* 🔹 altura fija, para que no quede enorme */
   margin: 20px auto;
   overflow: hidden;
   border-radius: 20px;
@@ -292,17 +293,26 @@ footer {
 .carousel-track {
   display: flex;
   width: 500%;
+  height: 100%;
   animation: slide 25s infinite;
 }
 
 .carousel-track img {
   width: 100%;
-  height: auto;
+  height: 100%;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: cover; /* 🔹 mantiene proporciones bonitas */
 }
 
-/* Animación automática */
+/* 🔹 Ajustes responsive para celulares */
+@media (max-width: 600px) {
+  .carousel {
+    max-width: 300px;
+    height: 220px;
+  }
+}
+
+/* 🔹 Animación automática */
 @keyframes slide {
   0% { transform: translateX(0); }
   20% { transform: translateX(0); }
