@@ -102,11 +102,28 @@ h2 {
 }
 
 /* --- Galería --- */
-.gallery .photos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  margin-top: 20px;
+.gallery img {
+  width: 90%;
+  max-width: 280px;       /* 🔹 más angostas */
+  height: 420px;          /* 🔹 más altas, formato vertical */
+  object-fit: cover;      /* 🔹 llena el cuadro sin deformar */
+  border-radius: 18px;
+  border: 3px solid #f0c040;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* 🔹 Ajuste para pantallas chicas */
+@media (max-width: 600px) {
+  .gallery img {
+    max-width: 240px;
+    height: 370px;
+  }
 }
 
 .gallery img {
