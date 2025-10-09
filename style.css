@@ -277,3 +277,40 @@ footer {
   display: inline-block;
   margin-top: 15px;
 }
+
+/* ==== GALERÍA CARRUSEL ==== */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: flex;
+  width: 500%;
+  animation: slide 25s infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Animación automática */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(-400%); }
+}
