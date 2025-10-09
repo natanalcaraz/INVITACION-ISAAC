@@ -279,10 +279,24 @@ footer {
 }
 
 /* --- Galería --- */
-.gallery {
-  text-align: center;
-  margin-top: 40px;
+.gallery img {
+  width: 90%;
+  max-width: 340px;      /* 🔹 un poco más anchas */
+  height: auto;          /* 🔹 se ajusta automáticamente al alto real */
+  object-fit: contain;   /* 🔹 muestra toda la imagen sin recortar */
+  border-radius: 15px;
+  border: 3px solid #f0c040;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* 🔹 fondo blanco para imágenes que no llenen el cuadro */
+  padding: 5px;
 }
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
 
 .gallery h2 {
   color: #0a3d91;
